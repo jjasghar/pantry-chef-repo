@@ -7,6 +7,8 @@ name 'pantry'
 # Get cookbooks from supermarket.chef.io
 default_source :community
 
+cookbook 'jj-mac-bootstrap', github: 'jjasghar/jj-mac-bootstrap', branch: 'master'
+
 ##########
 # Run List
 # chef-client will run these recipes in the order specified.
@@ -22,7 +24,8 @@ default_source :community
 # supermarket. See the POLICYFILE_README.md for more information.
 
 run_list(
-  'pantry'
+  'pantry',
+  'jj-mac-bootstrap'
 )
 
 ############
@@ -33,8 +36,8 @@ run_list(
 # %w(git go packer tree)
 #
 # packages for OS X
-default['homebrew']['casks']      = %w()
-default['homebrew']['formula']    = %w()
+default['homebrew']['casks']      = %w(1password alfred dropbox caffeine flux iterm2 slack thunderbird tunnelblick vagrant vlc virtualbox)
+default['homebrew']['formula']    = %w(aspell  curl git openssl)
 default['homebrew']['taps']       = %w()
 # packages for Windows
 default['chocolatey']['packages'] = %w()
