@@ -36,7 +36,7 @@ run_list(
 # %w(git go packer tree)
 #
 # packages for OS X
-default['homebrew']['casks']      = %w(1password alfred dropbox caffeine flux iterm2 slack thunderbird tunnelblick vagrant vlc virtualbox)
+default['homebrew']['casks']      = %w(1password alfred dropbox caffeine flux iterm2 thunderbird tunnelblick vagrant vlc virtualbox)
 default['homebrew']['formula']    = %w(aspell bash_completion curl git hub openssl)
 default['homebrew']['taps']       = %w()
 # packages for Windows
